@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "UTF-8">
+      <title></title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   </head>
+   
+   <body>
+      <div class="container">
+         <div class="row header">
+            
+            <img src="{{ url_for('static', filename='/assets/logo.svg') }}" alt="logo" class="logo">
+
+            <div class="nav row">
+               <div class="menu row">
+                  <a href="#">Settings</a>
+                  <a href="#">Learn more</a>
+                  <a href="#">Data policy</a>
+               </div>
+               <div class="user">
+                  <span>Mustapha Bilahoudoud</span>
+               
+                  <div class="svg row">
+                     <img src="{{ url_for('static', filename='/assets/avatar.svg') }}" alt="user">
+                     <img src="{{ url_for('static', filename='/assets/menu.svg') }}" alt="menu">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="row main">
+            <div class="video">
+               <img src="{{url_for('video')}}" alt="video" width="70%" height="auto">
+            </div>
+            <div class="text">
+               <h5>REAL-TIME TRANSLATION</h5>
+               <br/>
+               <P>" Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod "</P>
+            </div>
+         </div>
+
+         <div class="row bottom">
+            <div class="desc">
+               <h2>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+               </h2>
+               <br/>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <br/>
+               <p class="italic">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+            </div>
+            
+            <div class="controls">
+               <button class="one">
+                  <img src="{{ url_for('static', filename='/assets/hand.svg') }}" alt="">               
+                  START TRANSLATION
+               </button>
+               <br/>
+               <button class="two">
+                  <img src="{{ url_for('static', filename='/assets/ear.svg') }}" alt="">
+                  REPLAY NOW
+               </button>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <span>
+            <img src="{{ url_for('static', filename='/assets/earth.svg') }}" alt="logo">
+            info@yvette.com
+         </span>
+         <div>
+            <ul>
+               <li>
+                  <a href="#">
+                     <img src="{{ url_for('static', filename='/assets/facebook.svg') }}" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="{{ url_for('static', filename='/assets/twitter.svg') }}" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="{{ url_for('static', filename='/assets/instagram.svg') }}" alt="">
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div>
+            <span>striving to find meaning where there is none</span>
+         </div>
+      </footer>
+   </body>
+
+    <script>
+      // const electron = require('electron');
+      // const {ipcRenderer} = electron;
+
+      // const container = document.querySelector('.container');
+
+      // button.addEventListener('click', function() {
+      //   ipcRenderer.send('start');
+      // });
+      // ipcRenderer.on('message', function(e, message) {
+      //    const text = document.createElement('p');
+      //    text.appendChild(document.createTextNode(message));
+      //    container.appendChild(text);
+      // });
+    </script>
+</html>

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    padding: .2em 2em;
+    width: 100%;
+    height: 100%;
+    min-width: 960px;
+    background-color: #fff;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+img.logo{
+    display: inline-block;
+    height: 69px;
+    width: 180px;
+}
+
+.header{
+    justify-content: space-between;
+    padding-bottom: .5em;
+}
+
+.nav{
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 70%;;
+}
+
+.nav .svg{
+    width: 80px;
+    justify-content: space-between;
+}
+.nav .menu{
+    justify-content: space-evenly;
+}
+.nav .menu a{
+    text-decoration: none;
+    color: black;
+}
+.nav .user{
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: right; */
+}
+.nav .user{
+    font-weight: bold;
+}
+
+.main{
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.main > div{
+    width: 48%;
+    height: 100%;
+}
+
+.bottom > div {
+    width: 48%;
+    height: 100%;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button{
+    position: relative;
+    width: 295px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    /* margin-bottom: 1em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+button img{
+    position: absolute;
+    left: 2em;
+    top: .8em;
+}
+
+.one{
+    background: #CE2828;
+    color: #fff;
+}
+.two{
+    background: #fff;
+    color: #CE2828;
+    border: 2px solid #CE2828;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    padding: 3em;
+    text-align: center;
+    font-size: 25px;
+    background-color: #CE2828;
+    color: #fff;
+}
+
+
+
+.desc{
+    font-size: 14px;
+}
+.desc h2{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.desc .italic{
+    font-size: 16px;
+    font-style: italic;
+}
+
+footer{
+    height: 46px;
+    width: 100%;
+    background-color: #1F1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+    color: #fff;
+    font-size: 12px;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+}
+footer ul li{
+    text-decoration: none;
+}
