@@ -54,6 +54,14 @@ img.logo{
     text-decoration: none;
     color: black;
 }
+.nav .menu a:active{
+    text-decoration: underline;
+    color: #CE2828;
+}
+.nav .menu a:hover{
+    text-decoration: underline;
+    color: #CE2828;
+}
 .nav .user{
     min-width: 300px;
     display: flex;

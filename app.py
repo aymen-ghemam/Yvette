@@ -3,27 +3,34 @@ import os
 import cv2
 
 
+
 # Init app
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 camera = cv2.VideoCapture(0)
 
-words = ["Hello", "Yes", "No", "Okey",]
-# global variable
 word = ""
-def generate_frames():
-    while True:
-      ## read the camera frame
-      success,frame=camera.read()
-      if not success:
-          break
-      else:
-          ret,buffer=cv2.imencode('.jpg',frame)
-          frame=buffer.tobytes()
 
-      yield(b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+def return_word():
+    my_list = ["Fire fighter", "Cop", "Home", "Union", "Shirt"]
+    for i in range(len(my_list)):
+        yield my_list[i]
+
+my_gen = return_word()
+
+def generate_frames():
+  while True:
+    ## read the camera frame
+    success,frame=camera.read()
+    if not success:
+        break
+    else:
+        ret,buffer=cv2.imencode('.jpg',frame)
+        frame=buffer.tobytes()
+
+    yield(b'--frame\r\n'
+                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
 # Home route
@@ -37,12 +44,12 @@ def video():
 
 @app.route('/text')
 def text():
-    if word != "":
-      w = word
-      word = ""
-      return jsonify({"text": w})
-    else:
-      return jsonify({"text": "...."})
+  try:
+    w = next(my_gen)
+  except StopIteration:
+    pass
+  return jsonify({"text": w})
+    
 
 
 # Run Server

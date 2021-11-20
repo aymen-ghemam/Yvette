@@ -54,7 +54,7 @@
             </div>
             
             <div class="controls">
-               <button class="one">
+               <button id="start" class="one">
                   <img src="{{ url_for('static', filename='/assets/hand.svg') }}" alt="">               
                   START TRANSLATION
                </button>
@@ -98,15 +98,15 @@
 
     <script>
       const text = document.getElementById('text');
-      //fetches the text from the server every 5 seconds
-      // setInterval(() => {
-      //   fetch('/text')
-      //     .then(response => response.json())
-      //     .then(response => {
-      //       this.text.innerText = response.text;
-      //     });
-      // }, 2000);
-      
+      const button = document.getElementById('start');
+      button.addEventListener('click', () => {
+        //feth the text
+        fetch('/text')
+          .then(response => response.json())
+          .then(response => {
+            text.innerText = response.text;
+          });
+      });
 
     </script>
 </html>
